@@ -1,9 +1,12 @@
 (ns exercise7)
 
-(defn increment
-  "Increments a given input by 1."
-  [x]
-  (throw (Exception. "Not implemented."))
+(defn increment [x]
+	( if (list? x)
+	    (map inc x)
+	 (if (vector? x)
+	    (vec (map inc x) )
+	  )
+	)
 )
 
 
