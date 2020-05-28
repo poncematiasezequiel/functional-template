@@ -1,18 +1,17 @@
 (ns exercise10)
 
 (defn open-account []
-  (throw (Exception. "Not implemented."))
+  {:account 0}
 )
 
 (defn close-account [account]
-  (throw (Exception. "Not implemented."))
+ (dissoc account :account) 
 )
 
 (defn get-balance [account]
-  (throw (Exception. "Not implemented."))
+ (:account account)
 )
 
 (defn update-balance [account amount]
-  (throw (Exception. "Not implemented."))
+  (update account :account + amount)
 )
-
